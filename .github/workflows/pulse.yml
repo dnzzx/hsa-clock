@@ -6,7 +6,9 @@ name: pulse
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # re-semente diária, só para o caso da corrente quebrar
+    # re-semente, só para o caso da corrente quebrar. 09:00 e 21:00 UTC = 06:00 e 18:00 BRT
+    - cron: "0 9 * * *"
+    - cron: "0 21 * * *"
   workflow_dispatch:
 
 permissions:
